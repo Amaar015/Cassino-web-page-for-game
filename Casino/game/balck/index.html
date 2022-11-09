@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>PLAY BLACKJACK</title>
+</head>
+<body class="container-body">
+    <div class="container-main">
+        <img src="static/images/blackjackbanner.png">
+        <div class="flex-box-players">
+            <div class="flex-box-player", id="player-box">
+                <h2>You: <span id="player-blackjack-result">0</span></h2>
+
+                <div class="flex-box-start-cards" id="start-img">
+                    <img src="static/images/aces.png">
+                </div>
+                <div class="flex-box-player-cards" id="player-card-box">
+                </div>
+            </div>
+            <div class="flex-box-dealer", id="dealer-box">
+                <h2>Dealer: <span id="dealer-blackjack-result">0</span></h2>
+
+                <div class="flex-box-start-cards" id="start-img">
+                    <img src="static/images/aces.png">
+                </div>
+                <div class="flex-box-dealer-cards" id="dealer-card-box">
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="flex-box-buttons">
+            <div>
+                <button class="btn-lg btn-warning" id="hit-button" onclick="hitPlayer()" disabled=true>HIT</button>
+            </div>
+            <div>
+                <button class="btn-lg btn-danger" id="stay-button" onclick="dealer()" disabled=true>STAY</button>
+            </div>
+            <div>
+                <button class="btn-lg btn-success" id="deal-button" onclick="deal()">DEAL</button>
+            </div>
+        </div>
+
+        <div class="flex-box-scores">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>WINS</th>
+                    <th>DRAWS</th>
+                </tr>
+                <tr>
+                    <th><span id="player-display">PLAYER</span></th>
+                    <td><span id="player-wins">0</span></th>
+                    <td><span id="player-draws">0</span></th>
+                </tr> 
+                <tr>
+                    <th>DEALER</th>
+                    <td><span id="dealer-wins">0</span></th>
+                    <td><span id="dealer-draws">0</span></th>
+                </tr>   
+            </table>
+        </div>
+    </div>
+    </div>
+    <script src="static/js/script.js"></script>
+    <footer class="footer">
+        <p><a href="./../../index.html">Back</a></p>
+      </footer>
+</body>
+</html>
